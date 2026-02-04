@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HGPT Steel - Attendance Management</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+    <div class="app-wrapper">
+        <!-- BÊN TRÁI: DASHBOARD (VÙNG SẼ CHỤP ẢNH) -->
+        <div id="capture-area" class="dashboard-canvas">
+            <header class="db-header">
+                <div class="brand-zone">
+                    <img src="logo.png" alt="HGPT Logo" class="db-logo">
+                    <div class="brand-line"></div>
+                    <div class="db-title-group">
+                        <h1 class="main-report-title">TIN CHUYÊN CẦN</h1>
+                        <div class="quote-wrapper">
+                            <span class="quote-prefix">MESSAGE:</span>
+                            <span id="quote-line">SUCCESS TOGETHER</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="header-right">
+                    <div class="date-container">
+                        <span class="date-tag">BÁO CÁO NGÀY</span>
+                        <div class="date-box" id="display-date">04.02.2026</div>
+                    </div>
+                </div>
+            </header>
+
+            <section class="main-stats">
+                <div class="stats-card office">
+                    <div class="card-head">
+                        <div class="icon-circle blue">👥</div>
+                        <h3>KHỐI VĂN PHÒNG</h3>
+                    </div>
+                    <div class="stats-list">
+                        <div class="stat-row"><span>Nhân sự văn phòng</span> <strong id="v-vp">00</strong></div>
+                        <div class="stat-row"><span>Nhân sự cấp dưỡng</span> <strong id="v-cd">00</strong></div>
+                        <div class="stat-row"><span>Nhân sự bảo vệ</span> <strong id="v-bv">00</strong></div>
+                        <div class="stat-row highlight"><span>(!) Tăng ca ngày trước</span> <strong
+                                id="v-vptc">00</strong>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="stats-card factories">
+                    <div class="card-head">
+                        <div class="icon-circle red">🏗️</div>
+                        <h3>KHỐI SẢN XUẤT (SXTT)</h3>
+                    </div>
+                    <div class="stats-list">
+                        <div class="stat-row"><span>Nhân sự chính thức</span> <strong id="v-sxtt-ct">00</strong></div>
+                        <div class="stat-row"><span>Nhân sự ngắn hạn</span> <strong id="v-sxtt-nh">00</strong></div>
+                        <div class="stat-row"><span>Kho & Lái xe vật tư</span> <strong id="v-kho">00</strong></div>
+                        <div class="stat-row"><span>Bảo trì cơ - điện</span> <strong id="v-bt">00</strong></div>
+                        <div class="stat-row highlight"><span>(!) Nhân sự tăng ca ngày trước</span> <strong
+                                id="v-sxtc-prev">00</strong></div>
+                        <div class="stat-row highlight"><span>(!) Nhân sự HGPT tại DA - CT</span> <strong
+                                id="v-da">00</strong>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="summary-zone">
+                <div class="chart-section">
+                    <h4>CƠ CẤU NHÂN SỰ (% TRONG NGÀY)</h4>
+                    <div class="chart-flex">
+                        <div class="chart-wrapper">
+                            <canvas id="attendanceChart"></canvas>
+                        </div>
+                        <div id="chart-legend" class="custom-legend">
+                            <!-- JS sẽ điền chú thích vào đây -->
+                        </div>
+                    </div>
+                </div>
+                <div class="motivation-section">
+                    <div class="quote-card">
+                        <p id="quote-sub">"Luôn giữ vững kỷ luật và an toàn trong mỗi giờ lao động."</p>
+                    </div>
+                    <div class="safety-label">
+                        <span id="v-icon">🛡️</span>
+                        <span id="v-label">AN TOÀN LÀ TRÊN HẾT</span>
+                    </div>
+                </div>
+            </section>
+
+            <footer>© HGPT STEEL - SUCCESS TOGETHER</footer>
+        </div>
+
+        <!-- BÊN PHẢI: BẢNG ĐIỀU KHIỂN (CONTROL PANEL) -->
+        <aside class="control-panel">
+            <div class="panel-header">
+                <h2>CẬP NHẬT DỮ LIỆU</h2>
+                <p>Thông số sẽ được cập nhật trực tiếp lên Dashboard</p>
+            </div>
+
+            <div class="scroll-inputs">
+                <div class="input-group">
+                    <label class="group-title">🏢 KHỐI VĂN PHÒNG</label>
+                    <div class="field"><label>Văn phòng</label><input type="number" id="in-vp" value="35"
+                            oninput="updateDashboard()"></div>
+                    <div class="field"><label>Cấp dưỡng</label><input type="number" id="in-cd" value="5"
+                            oninput="updateDashboard()"></div>
+                    <div class="field"><label>Bảo vệ</label><input type="number" id="in-bv" value="1"
+                            oninput="updateDashboard()"></div>
+                    <div class="field"><label>Tăng ca ngày trước</label><input type="number" id="in-vptc" value="13"
+                            oninput="updateDashboard()"></div>
+                </div>
+
+                <div class="input-group">
+                    <label class="group-title">🏗️ KHỐI SẢN XUẤT</label>
+                    <div class="field"><label>Chính thức</label><input type="number" id="in-sxtt-ct" value="61"
+                            oninput="updateDashboard()"></div>
+                    <div class="field"><label>Ngắn hạn</label><input type="number" id="in-sxtt-nh" value="9"
+                            oninput="updateDashboard()"></div>
+                    <div class="field"><label>Kho / Lái xe</label><input type="number" id="in-kho" value="3"
+                            oninput="updateDashboard()"></div>
+                    <div class="field"><label>Bảo trì</label><input type="number" id="in-bt" value="3"
+                            oninput="updateDashboard()"></div>
+                    <div class="field"><label>Tăng ca ngày trước</label><input type="number" id="in-sxtc-prev" value="5"
+                            oninput="updateDashboard()"></div>
+                    <div class="field"><label>Dự án/CT</label><input type="number" id="in-da" value="5"
+                            oninput="updateDashboard()"></div>
+                </div>
+            </div>
+
+            <div class="panel-actions">
+                <button class="btn-shuffle" onclick="shuffleQuote()">♻️ ĐỔI THÔNG ĐIỆP</button>
+                <button class="btn-export" onclick="window.print()">📸 XUẤT ẢNH / IN</button>
+            </div>
+        </aside>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
