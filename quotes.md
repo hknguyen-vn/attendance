@@ -18,6 +18,6 @@ Bộ thông điệp dành riêng cho Cán bộ Công nhân viên HGPT Steel, t�
 - GIẢI PHÁP TỐI ƯU | Tư vấn tận tâm, dự báo rủi ro, kiểm soát chất lượng chặt chẽ.
 - GIẢI PHÁP TỐI ƯU | Phối hợp nhịp nhàng, duy trì 5S, an toàn xuyên suốt mọi công trình.
 - TRÁCH NHIỆM ĐẾN CÙNG | Đồng hành cùng khách hàng từ bản vẽ đến khi công trình đi vào sử dụng.
-- TRÁCH NHIỆM ĐẾN CÙNG | Không bỏ rơi, không đổ lỗi, chia sẻ rủi ro trong mọi hoàn cảnh.
+- TRÁCH NHIỆM ĐẾN CÙNG | Không bỏ rơi, không đổ lỗi, chia sẻ rủi ro trong mọi hoàn cảnh..
 - TRÁCH NHIỆM ĐẾN CÙNG | Luôn có mặt lúc khách hàng cần, bảo hành kịp thời và tận tâm.
 - TRÁCH NHIỆM ĐẾN CÙNG | Hỗ trợ khách hàng vượt ngoài phạm vi công việc khi gặp khó khăn.
