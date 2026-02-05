@@ -11,6 +11,7 @@
         rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
 </head>
 
 <body>
@@ -138,7 +139,10 @@
 
             <div class="panel-actions">
                 <button class="btn-shuffle" onclick="shuffleQuote()">♻️ ĐỔI THÔNG ĐIỆP</button>
-                <button class="btn-export" onclick="window.print()">📸 XUẤT ẢNH / IN</button>
+                <div class="export-group">
+                    <button class="btn-screenshot" onclick="takeScreenshot()">📸 CHỤP ẢNH</button>
+                    <button class="btn-print" onclick="window.print()">📄 IN / PDF</button>
+                </div>
             </div>
         </aside>
     </div>

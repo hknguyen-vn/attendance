@@ -205,3 +205,46 @@ function shuffleQuote() {
 initDate();
 updateDashboard();
 loadQuotes();
+
+async function takeScreenshot() {
+    const btn = document.querySelector('.btn-screenshot');
+    const originalText = btn.innerText;
+
+    // 1. Hiển thị trạng thái đang xử lý
+    btn.disabled = true;
+    btn.innerText = "⏳ ĐANG CHỤP...";
+
+    const captureArea = document.getElementById('capture-area');
+
+    try {
+        // 2. Sử dụng html2canvas để chụp (cấu hình scale 2 cho ảnh sắc nét)
+        const canvas = await html2canvas(captureArea, {
+            scale: 2,
+            useCORS: true,
+            logging: false,
+            backgroundColor: "#ffffff"
+        });
+
+        // 3. Chuyển canvas thành ảnh và tải về
+        const image = canvas.toDataURL("image/png");
+        const link = document.createElement('a');
+        const dateStr = document.getElementById('display-date').innerText.replace(/\./g, '-');
+
+        link.download = `HGPT-CHUYEN-CAN-${dateStr}.png`;
+        link.href = image;
+        link.click();
+
+        // 4. Báo thành công
+        btn.innerText = "✅ THÀNH CÔNG";
+    } catch (error) {
+        console.error("Lỗi khi chụp ảnh:", error);
+        alert("Lỗi khi chụp ảnh Dashboard. Hãy thử lại!");
+        btn.innerText = originalText;
+    } finally {
+        // 5. Khôi phục nút sau 2 giây
+        setTimeout(() => {
+            btn.disabled = false;
+            btn.innerText = originalText;
+        }, 2000);
+    }
+}

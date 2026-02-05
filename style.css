@@ -216,7 +216,7 @@ body {
 .summary-zone {
     display: flex;
     gap: 40px;
-    background: #fff;
+    background: #ebe9e8;
     padding: 30px;
     border-radius: var(--radius);
     position: relative;
@@ -251,7 +251,7 @@ body {
 }
 
 .chart-section h4 {
-    font-size: 12px;
+    font-size: 13px;
     font-weight: 700;
     color: #3d0808;
     margin-bottom: 20px;
@@ -278,7 +278,7 @@ body {
 .legend-item {
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 12px;
     font-size: 11px;
     font-weight: 600;
     white-space: nowrap;
@@ -416,10 +416,36 @@ footer {
     color: white;
 }
 
-.btn-export {
+.export-group {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+}
+
+.btn-screenshot {
     background: var(--hgpt-red);
     color: white;
-    box-shadow: 0 10px 20px rgba(237, 28, 36, 0.2);
+    box-shadow: 0 4px 15px rgba(237, 28, 36, 0.2);
+}
+
+.btn-print {
+    background: #6c757d;
+    color: white;
+}
+
+.panel-actions button:hover {
+    opacity: 0.9;
+    transform: translateY(-2px);
+    transition: all 0.3s ease;
+}
+
+.panel-actions button:active {
+    transform: scale(0.98);
+}
+
+.panel-actions button:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
 }
 
 /* Print Styles */
