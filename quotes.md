@@ -14,10 +14,10 @@ Bộ thông điệp dành riêng cho Cán bộ Công nhân viên HGPT Steel, t�
 - NÓI SAO LÀM VẬY | Cam kết đúng tiến độ, đúng chủng loại, đúng yêu cầu.
 - NÓI SAO LÀM VẬY | Số liệu chính xác, thông tin kịp thời, không nói quá sự thật.
 - NÓI SAO LÀM VẬY | Giữ chữ tín trong thanh toán, đúng hạn với đối tác và đồng nghiệp.
-- GIẢI PHÁP TỐI ƯU | Thiết kế tối ưu, tiết kiệm chi phí cho khách hàng.
+- GIẢI PHÁP TỐI ƯU | Thiết kế tối ưu, tiết kiệm chi phí cho Khách hàng.
 - GIẢI PHÁP TỐI ƯU | Tư vấn tận tâm, dự báo rủi ro, kiểm soát chất lượng chặt chẽ.
 - GIẢI PHÁP TỐI ƯU | Phối hợp nhịp nhàng, duy trì 5S, an toàn xuyên suốt mọi công trình.
-- TRÁCH NHIỆM ĐẾN CÙNG | Đồng hành cùng khách hàng từ bản vẽ đến khi công trình đi vào sử dụng.
+- TRÁCH NHIỆM ĐẾN CÙNG | Đồng hành cùng Khách hàng từ bản vẽ đến khi công trình đi vào sử dụng.
 - TRÁCH NHIỆM ĐẾN CÙNG | Không bỏ rơi, không đổ lỗi, chia sẻ rủi ro trong mọi hoàn cảnh..
-- TRÁCH NHIỆM ĐẾN CÙNG | Luôn có mặt lúc khách hàng cần, bảo hành kịp thời và tận tâm.
-- TRÁCH NHIỆM ĐẾN CÙNG | Hỗ trợ khách hàng vượt ngoài phạm vi công việc khi gặp khó khăn.
+- TRÁCH NHIỆM ĐẾN CÙNG | Luôn có mặt lúc Khách hàng cần, bảo hành kịp thời và tận tâm.
+- TRÁCH NHIỆM ĐẾN CÙNG | Hỗ trợ Khách hàng vượt ngoài phạm vi công việc khi gặp khó khăn.

@@ -90,8 +90,9 @@ function updateChart(office, production, ct, nh) {
 
     const data = [vp_total + bv, cd_total, sxtt_ct, sxtt_nh + kho + bt];
     const labels = ['Văn phòng & BV', 'Cấp dưỡng', 'SX chính thức', 'SX ngắn hạn & Phụ trợ'];
-    const colors = ['#002d72', '#ced4da', '#ed1c24', '#f39c12'];
+    const colors = ['#002d72', '#10b981', '#ed1c24', '#f39c12'];
     const total = data.reduce((a, b) => a + b, 0);
+    document.getElementById('total-count').innerText = total;
 
     // Cập nhật Chú thích (Custom Legend)
     const legendContainer = document.getElementById('chart-legend');
@@ -103,7 +104,7 @@ function updateChart(office, production, ct, nh) {
         item.className = 'legend-item';
         item.innerHTML = `
             <div class="legend-color" style="background: ${colors[i]}"></div>
-            <span>${labels[i]}: <strong>${val}</strong> (${percent}%)</span>
+            <span>${labels[i]}: <strong>${val}</strong> <span class="percent-tag">(${percent}%)</span></span>
         `;
         legendContainer.appendChild(item);
     });
@@ -149,37 +150,37 @@ function shuffleQuote() {
             {
                 keys: ['an toàn', 'safety', 'bảo hộ', 'về nhà'],
                 label: "HGPT SAFETY",
-                icon: "🛡️",
+                icon: "shield-check",
                 color: "var(--hgpt-red)"
             },
             {
                 keys: ['kỷ luật', 'quy trình', 'tác phong', 'đúng giờ'],
                 label: "HGPT DISCIPLINE",
-                icon: "⚖️",
+                icon: "scale",
                 color: "#333"
             },
             {
                 keys: ['nói sao làm vậy', 'tiến độ', 'chủng loại', 'thanh toán', 'chữ tín', 'chính xác'],
                 label: "NÓI SAO LÀM VẬY",
-                icon: "🤝",
+                icon: "handshake",
                 color: "var(--hgpt-blue)"
             },
             {
                 keys: ['giải pháp tối ưu', 'thiết kế tối ưu', 'tiết kiệm', 'win - win', '5s', 'phối hợp'],
                 label: "GIẢI PHÁP TỐI ƯU",
-                icon: "💡",
+                icon: "lightbulb",
                 color: "var(--hgpt-brown)"
             },
             {
                 keys: ['trách nhiệm đến cùng', 'không bỏ rơi', 'không đổ lỗi', 'bảo hành', 'tận tâm', 'đồng hành'],
                 label: "TRÁCH NHIỆM ĐẾN CÙNG",
-                icon: "🏆",
+                icon: "trophy",
                 color: "var(--hgpt-red)"
             },
             {
                 keys: ['tết', 'năm mới', 'xuân', 'chúc mừng'],
                 label: "HGPT CELEBRATIONS",
-                icon: "🧧",
+                icon: "gift",
                 color: "var(--hgpt-red)"
             }
         ];
@@ -189,15 +190,18 @@ function shuffleQuote() {
 
         if (found) {
             label.innerText = found.label;
-            icon.innerText = found.icon;
+            icon.setAttribute('data-lucide', found.icon);
             label.style.color = found.color;
         } else {
             // Nếu không tìm thấy, tự động tạo nhãn HGPT + Tiêu đề ngắn gọn
             const shortTitle = q.main.split(' ')[0].toUpperCase();
             label.innerText = `HGPT ${shortTitle}`;
-            icon.innerText = "✨";
+            icon.setAttribute('data-lucide', 'sparkles');
             label.style.color = "var(--hgpt-brown)";
         }
+
+        // Cập nhật SVG icon
+        lucide.createIcons();
     }
 }
 
@@ -205,6 +209,7 @@ function shuffleQuote() {
 initDate();
 updateDashboard();
 loadQuotes();
+lucide.createIcons();
 
 async function takeScreenshot() {
     const btn = document.querySelector('.btn-screenshot');
@@ -217,20 +222,20 @@ async function takeScreenshot() {
     const captureArea = document.getElementById('capture-area');
 
     try {
-        // 2. Sử dụng html2canvas để chụp (cấu hình scale 2 cho ảnh sắc nét)
+        // 2. Sử dụng html2canvas để chụp (cấu hình scale 1.5 để cân bằng độ nét và dung lượng)
         const canvas = await html2canvas(captureArea, {
-            scale: 2,
+            scale: 1.5,
             useCORS: true,
             logging: false,
             backgroundColor: "#ffffff"
         });
 
-        // 3. Chuyển canvas thành ảnh và tải về
-        const image = canvas.toDataURL("image/png");
+        // 3. Chuyển canvas thành ảnh JPEG (nén tốt hơn PNG cho các vùng mờ/gradient)
+        const image = canvas.toDataURL("image/jpeg", 0.85);
         const link = document.createElement('a');
         const dateStr = document.getElementById('display-date').innerText.replace(/\./g, '-');
 
-        link.download = `HGPT-CHUYEN-CAN-${dateStr}.png`;
+        link.download = `HGPT-CHUYEN-CAN-${dateStr}.jpg`;
         link.href = image;
         link.click();
 
