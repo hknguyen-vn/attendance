@@ -27,7 +27,10 @@
                     <div class="db-title-group">
                         <h1 class="main-report-title">TIN CHUYÊN CẦN</h1>
                         <div class="quote-wrapper">
-                            <span class="quote-prefix">Message:</span>
+                            <div class="topic-tag">
+                                <i data-lucide="megaphone"></i>
+                                <span>MESSAGE:</span>
+                            </div>
                             <span id="quote-line">SUCCESS TOGETHER</span>
                         </div>
                     </div>
@@ -122,32 +125,108 @@
                     <label class="group-title">
                         <i data-lucide="building-2"></i> KHỐI VĂN PHÒNG
                     </label>
-                    <div class="field"><label>Văn phòng</label><input type="number" id="in-vp" value="35"
-                            oninput="updateDashboard()"></div>
-                    <div class="field"><label>Cấp dưỡng</label><input type="number" id="in-cd" value="5"
-                            oninput="updateDashboard()"></div>
-                    <div class="field"><label>Bảo vệ</label><input type="number" id="in-bv" value="1"
-                            oninput="updateDashboard()"></div>
-                    <div class="field"><label>Tăng ca ngày trước</label><input type="number" id="in-vptc" value="13"
-                            oninput="updateDashboard()"></div>
+                    <div class="field">
+                        <label>Văn phòng</label>
+                        <div class="number-control">
+                            <button onclick="changeValue('in-vp', -1)"><i data-lucide="minus"></i></button>
+                            <input type="number" id="in-vp" value="35" oninput="updateDashboard()">
+                            <button onclick="changeValue('in-vp', 1)"><i data-lucide="plus"></i></button>
+                        </div>
+                    </div>
+                    <div class="field">
+                        <label>Cấp dưỡng</label>
+                        <div class="number-control">
+                            <button onclick="changeValue('in-cd', -1)"><i data-lucide="minus"></i></button>
+                            <input type="number" id="in-cd" value="5" oninput="updateDashboard()">
+                            <button onclick="changeValue('in-cd', 1)"><i data-lucide="plus"></i></button>
+                        </div>
+                    </div>
+                    <div class="field">
+                        <label>Bảo vệ</label>
+                        <div class="number-control">
+                            <button onclick="changeValue('in-bv', -1)"><i data-lucide="minus"></i></button>
+                            <input type="number" id="in-bv" value="1" oninput="updateDashboard()">
+                            <button onclick="changeValue('in-bv', 1)"><i data-lucide="plus"></i></button>
+                        </div>
+                    </div>
+                    <div class="field">
+                        <label>Tăng ca ngày trước</label>
+                        <div class="number-control">
+                            <button onclick="changeValue('in-vptc', -1)"><i data-lucide="minus"></i></button>
+                            <input type="number" id="in-vptc" value="13" oninput="updateDashboard()">
+                            <button onclick="changeValue('in-vptc', 1)"><i data-lucide="plus"></i></button>
+                        </div>
+                    </div>
                 </div>
 
                 <div class="input-group">
                     <label class="group-title">
                         <i data-lucide="anvil"></i> KHỐI SẢN XUẤT
                     </label>
-                    <div class="field"><label>Chính thức</label><input type="number" id="in-sxtt-ct" value="61"
-                            oninput="updateDashboard()"></div>
-                    <div class="field"><label>Ngắn hạn</label><input type="number" id="in-sxtt-nh" value="9"
-                            oninput="updateDashboard()"></div>
-                    <div class="field"><label>Kho / Lái xe</label><input type="number" id="in-kho" value="3"
-                            oninput="updateDashboard()"></div>
-                    <div class="field"><label>Bảo trì</label><input type="number" id="in-bt" value="3"
-                            oninput="updateDashboard()"></div>
-                    <div class="field"><label>Tăng ca ngày trước</label><input type="number" id="in-sxtc-prev" value="5"
-                            oninput="updateDashboard()"></div>
-                    <div class="field"><label>Dự án/CT</label><input type="number" id="in-da" value="5"
-                            oninput="updateDashboard()"></div>
+                    <div class="field">
+                        <label>Chính thức</label>
+                        <div class="number-control">
+                            <button onclick="changeValue('in-sxtt-ct', -1)"><i data-lucide="minus"></i></button>
+                            <input type="number" id="in-sxtt-ct" value="61" oninput="updateDashboard()">
+                            <button onclick="changeValue('in-sxtt-ct', 1)"><i data-lucide="plus"></i></button>
+                        </div>
+                    </div>
+                    <div class="field">
+                        <label>Ngắn hạn</label>
+                        <div class="number-control">
+                            <button onclick="changeValue('in-sxtt-nh', -1)"><i data-lucide="minus"></i></button>
+                            <input type="number" id="in-sxtt-nh" value="9" oninput="updateDashboard()">
+                            <button onclick="changeValue('in-sxtt-nh', 1)"><i data-lucide="plus"></i></button>
+                        </div>
+                    </div>
+                    <div class="field">
+                        <label>Kho / Lái xe</label>
+                        <div class="number-control">
+                            <button onclick="changeValue('in-kho', -1)"><i data-lucide="minus"></i></button>
+                            <input type="number" id="in-kho" value="3" oninput="updateDashboard()">
+                            <button onclick="changeValue('in-kho', 1)"><i data-lucide="plus"></i></button>
+                        </div>
+                    </div>
+                    <div class="field">
+                        <label>Bảo trì</label>
+                        <div class="number-control">
+                            <button onclick="changeValue('in-bt', -1)"><i data-lucide="minus"></i></button>
+                            <input type="number" id="in-bt" value="3" oninput="updateDashboard()">
+                            <button onclick="changeValue('in-bt', 1)"><i data-lucide="plus"></i></button>
+                        </div>
+                    </div>
+                    <div class="field">
+                        <label>Tăng ca ngày trước</label>
+                        <div class="number-control">
+                            <button onclick="changeValue('in-sxtc-prev', -1)"><i data-lucide="minus"></i></button>
+                            <input type="number" id="in-sxtc-prev" value="5" oninput="updateDashboard()">
+                            <button onclick="changeValue('in-sxtc-prev', 1)"><i data-lucide="plus"></i></button>
+                        </div>
+                    </div>
+                    <div class="field">
+                        <label>Dự án/CT</label>
+                        <div class="number-control">
+                            <button onclick="changeValue('in-da', -1)"><i data-lucide="minus"></i></button>
+                            <input type="number" id="in-da" value="5" oninput="updateDashboard()">
+                            <button onclick="changeValue('in-da', 1)"><i data-lucide="plus"></i></button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- TUỲ CHỈNH THÔNG ĐIỆP -->
+                <div class="input-group">
+                    <label class="group-title">
+                        <i data-lucide="message-square"></i> TUỲ CHỈNH THÔNG ĐIỆP
+                    </label>
+                    <div class="field-stack">
+                        <label>Thông điệp / Tiêu đề</label>
+                        <input type="text" id="in-msg" placeholder="SUCCESS TOGETHER" oninput="updateCustomQuote()">
+                    </div>
+                    <div class="field-stack">
+                        <label>Nội dung Quote</label>
+                        <textarea id="in-quote" rows="2" placeholder="Nhập nội dung câu quote..."
+                            oninput="updateCustomQuote()"></textarea>
+                    </div>
                 </div>
             </div>
 

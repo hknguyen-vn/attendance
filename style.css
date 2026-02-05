@@ -81,24 +81,41 @@ body {
 .quote-wrapper {
     display: flex;
     align-items: center;
-    gap: 8px;
-    margin-top: 5px;
+    gap: 12px;
+    margin-top: 10px;
+    background: rgba(0, 45, 114, 0.04);
+    padding: 3px 15px 3px 3px;
+    border-radius: 50px;
+    width: fit-content;
+    border: 1px solid rgba(0, 45, 114, 0.05);
 }
 
-.quote-prefix {
+.topic-tag {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    background: var(--hgpt-red);
+    color: white;
+    padding: 5px 12px;
+    border-radius: 50px;
     font-size: 10px;
     font-weight: 800;
-    color: var(--white);
-    background: var(--hgpt-red);
-    padding: 2px 6px;
-    border-radius: 3px;
+    letter-spacing: 0.5px;
+    box-shadow: 0 2px 8px rgba(237, 28, 36, 0.2);
+}
+
+.topic-tag i {
+    width: 12px;
+    height: 12px;
+    stroke-width: 3px;
 }
 
 #quote-line {
-    font-size: 14px;
-    font-weight: 700;
-    color: var(--hgpt-brown);
+    font-size: 13px;
+    font-weight: 800;
+    color: var(--hgpt-blue);
     text-transform: uppercase;
+    letter-spacing: 0.2px;
 }
 
 .header-right {
@@ -430,7 +447,8 @@ footer {
     background: linear-gradient(135deg, var(--hgpt-brown) 0%, #3a2817 100%);
     color: white;
     border-radius: 24px;
-    padding: 30px;
+    padding: 24px;
+    /* Giảm từ 30px */
     display: flex;
     flex-direction: column;
     box-shadow: 0 20px 50px rgba(0, 0, 0, 0.2);
@@ -438,9 +456,10 @@ footer {
 }
 
 .panel-header {
-    margin-bottom: 30px;
+    margin-bottom: 20px;
+    /* Giảm từ 30px */
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-    padding-bottom: 15px;
+    padding-bottom: 12px;
 }
 
 .panel-header h2 {
@@ -461,18 +480,20 @@ footer {
 }
 
 .input-group {
-    margin-bottom: 25px;
+    margin-bottom: 18px;
+    /* Giảm từ 25px */
 }
 
 .group-title {
     display: flex;
     align-items: center;
     gap: 8px;
-    font-size: 14px;
+    font-size: 13px;
+    /* Giảm từ 14px */
     font-weight: 800;
     color: #eab308;
     /* Vàng hổ phách */
-    margin-bottom: 15px;
+    margin-bottom: 12px;
     padding-bottom: 5px;
 }
 
@@ -486,24 +507,103 @@ footer {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 12px;
+    margin-bottom: 10px;
+    /* Giảm từ 12px */
 }
 
-.field label {
-    font-size: 14px;
+.field-stack {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    margin-bottom: 10px;
+    /* Giảm từ 15px */
+}
+
+.field label,
+.field-stack label {
+    font-size: 13px;
+    /* Giảm từ 14px */
     font-weight: 600;
     color: #eee;
 }
 
-.field input {
-    width: 80px;
-    background: rgba(255, 255, 255, 0.1);
-    border: 1px solid rgba(255, 255, 255, 0.2);
+.field-stack input,
+.field-stack textarea {
+    width: 100%;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
     color: white;
-    padding: 8px;
-    border-radius: 6px;
+    padding: 8px 10px;
+    /* Nhỏ hơn */
+    border-radius: 8px;
+    font-size: 12px;
+    font-family: inherit;
+    transition: all 0.2s ease;
+}
+
+.field-stack input:focus,
+.field-stack textarea:focus {
+    outline: none;
+    border-color: var(--hgpt-red);
+    background: rgba(255, 255, 255, 0.08);
+}
+
+/* Bộ điều khiển số lượng (Plus/Minus) */
+.number-control {
+    display: flex;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.08);
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    overflow: hidden;
+}
+
+.number-control button {
+    background: transparent;
+    border: none;
+    color: #ccc;
+    cursor: pointer;
+    padding: 6px 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s;
+}
+
+.number-control button:hover {
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+}
+
+.number-control button i {
+    width: 14px;
+    height: 14px;
+    stroke-width: 3px;
+}
+
+.number-control input {
+    width: 45px !important;
+    background: transparent !important;
+    border: none !important;
+    color: white !important;
     text-align: center;
     font-weight: 700;
+    font-size: 14px;
+    padding: 5px 0;
+    -moz-appearance: textfield;
+    appearance: none;
+}
+
+/* Ẩn mũi tên mặc định */
+.number-control input::-webkit-outer-spin-button,
+.number-control input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    appearance: none;
+    margin: 0;
+}
+
+.field input {
+    /* Đã chuyển vào .number-control input */
     font-family: inherit;
 }
 

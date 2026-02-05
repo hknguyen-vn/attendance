@@ -133,6 +133,51 @@ function updateChart(office, production, ct, nh) {
     });
 }
 
+// Phân loại thông điệp để lấy Icon và màu sắc phù hợp
+function getCategoryInfo(text) {
+    const combinedText = text.toLowerCase();
+    const categories = [
+        {
+            keys: ['an toàn', 'safety', 'bảo hộ', 'về nhà'],
+            label: "HGPT SAFETY",
+            icon: "shield-check",
+            color: "var(--hgpt-red)"
+        },
+        {
+            keys: ['kỷ luật', 'quy trình', 'tác phong', 'đúng giờ'],
+            label: "HGPT DISCIPLINE",
+            icon: "scale",
+            color: "#333"
+        },
+        {
+            keys: ['nói sao làm vậy', 'tiến độ', 'chủng loại', 'thanh toán', 'chữ tín', 'chính xác'],
+            label: "NÓI SAO LÀM VẬY",
+            icon: "handshake",
+            color: "var(--hgpt-blue)"
+        },
+        {
+            keys: ['giải pháp tối ưu', 'thiết kế tối ưu', 'tiết kiệm', 'win - win', '5s', 'phối hợp'],
+            label: "GIẢI PHÁP TỐI ƯU",
+            icon: "lightbulb",
+            color: "var(--hgpt-brown)"
+        },
+        {
+            keys: ['trách nhiệm đến cùng', 'không bỏ rơi', 'không đổ lỗi', 'bảo hành', 'tận tâm', 'đồng hành'],
+            label: "TRÁCH NHIỆM ĐẾN CÙNG",
+            icon: "trophy",
+            color: "var(--hgpt-red)"
+        },
+        {
+            keys: ['tết', 'năm mới', 'xuân', 'chúc mừng'],
+            label: "HGPT CELEBRATIONS",
+            icon: "gift",
+            color: "var(--hgpt-red)"
+        }
+    ];
+
+    return categories.find(cat => cat.keys.some(key => combinedText.includes(key)));
+}
+
 function shuffleQuote() {
     if (quotes.length > 0) {
         const randomIdx = Math.floor(Math.random() * quotes.length);
@@ -141,68 +186,65 @@ function shuffleQuote() {
         document.getElementById('quote-line').innerText = q.main;
         document.getElementById('quote-sub').innerText = `"${q.sub}"`;
 
-        const label = document.getElementById('v-label');
-        const icon = document.getElementById('v-icon');
-        const combinedText = (q.main + " " + q.sub).toLowerCase();
+        // Đồng bộ lên bảng điều khiển
+        document.getElementById('in-msg').value = q.main;
+        document.getElementById('in-quote').value = q.sub;
 
-        // Hệ thống phân loại thông minh theo văn hóa HGPT và bộ 3 Giá trị cốt lõi
-        const categories = [
-            {
-                keys: ['an toàn', 'safety', 'bảo hộ', 'về nhà'],
-                label: "HGPT SAFETY",
-                icon: "shield-check",
-                color: "var(--hgpt-red)"
-            },
-            {
-                keys: ['kỷ luật', 'quy trình', 'tác phong', 'đúng giờ'],
-                label: "HGPT DISCIPLINE",
-                icon: "scale",
-                color: "#333"
-            },
-            {
-                keys: ['nói sao làm vậy', 'tiến độ', 'chủng loại', 'thanh toán', 'chữ tín', 'chính xác'],
-                label: "NÓI SAO LÀM VẬY",
-                icon: "handshake",
-                color: "var(--hgpt-blue)"
-            },
-            {
-                keys: ['giải pháp tối ưu', 'thiết kế tối ưu', 'tiết kiệm', 'win - win', '5s', 'phối hợp'],
-                label: "GIẢI PHÁP TỐI ƯU",
-                icon: "lightbulb",
-                color: "var(--hgpt-brown)"
-            },
-            {
-                keys: ['trách nhiệm đến cùng', 'không bỏ rơi', 'không đổ lỗi', 'bảo hành', 'tận tâm', 'đồng hành'],
-                label: "TRÁCH NHIỆM ĐẾN CÙNG",
-                icon: "trophy",
-                color: "var(--hgpt-red)"
-            },
-            {
-                keys: ['tết', 'năm mới', 'xuân', 'chúc mừng'],
-                label: "HGPT CELEBRATIONS",
-                icon: "gift",
-                color: "var(--hgpt-red)"
-            }
-        ];
+        const labelElements = document.getElementById('v-label');
+        const iconElement = document.getElementById('v-icon');
 
-        // Tìm category phù hợp nhất bằng cách quét cả tiêu đề và nội dung
-        let found = categories.find(cat => cat.keys.some(key => combinedText.includes(key)));
+        const found = getCategoryInfo(q.main + " " + q.sub);
 
         if (found) {
-            label.innerText = found.label;
-            icon.setAttribute('data-lucide', found.icon);
-            label.style.color = found.color;
+            labelElements.innerText = found.label;
+            iconElement.setAttribute('data-lucide', found.icon);
+            labelElements.style.color = found.color;
         } else {
-            // Nếu không tìm thấy, tự động tạo nhãn HGPT + Tiêu đề ngắn gọn
             const shortTitle = q.main.split(' ')[0].toUpperCase();
-            label.innerText = `HGPT ${shortTitle}`;
-            icon.setAttribute('data-lucide', 'sparkles');
-            label.style.color = "var(--hgpt-brown)";
+            labelElements.innerText = `HGPT ${shortTitle}`;
+            iconElement.setAttribute('data-lucide', 'sparkles');
+            labelElements.style.color = "var(--hgpt-brown)";
         }
 
-        // Cập nhật SVG icon
         lucide.createIcons();
     }
+}
+
+function updateCustomQuote() {
+    const msg = document.getElementById('in-msg').value;
+    const quote = document.getElementById('in-quote').value;
+
+    const displayMsg = document.getElementById('quote-line');
+    const displayLabel = document.getElementById('v-label');
+    const displaySub = document.getElementById('quote-sub');
+    const displayIcon = document.getElementById('v-icon');
+
+    if (msg) {
+        displayMsg.innerText = msg;
+        displayLabel.innerText = msg; // Đồng bộ nhãn với thông điệp chính
+    }
+    if (quote) displaySub.innerText = `"${quote}"`;
+
+    const found = getCategoryInfo((msg || "") + " " + (quote || ""));
+    if (found) {
+        displayIcon.setAttribute('data-lucide', found.icon);
+        displayLabel.style.color = found.color;
+    } else {
+        displayIcon.setAttribute('data-lucide', 'message-square');
+        displayLabel.style.color = "var(--hgpt-brown)";
+    }
+
+    lucide.createIcons();
+}
+
+// Tăng/giảm giá trị của input số lượng
+function changeValue(id, delta) {
+    const input = document.getElementById(id);
+    let val = parseInt(input.value) || 0;
+    val += delta;
+    if (val < 0) val = 0; // Không để giá trị âm
+    input.value = val;
+    updateDashboard();
 }
 
 // Khởi chạy
