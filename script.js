@@ -30,7 +30,7 @@ function initDate() {
     const day = today.getDate().toString().padStart(2, '0');
     const month = (today.getMonth() + 1).toString().padStart(2, '0');
     const year = today.getFullYear();
-    document.getElementById('display-date').innerText = `${day}.${month}.${year}`;
+    document.getElementById('date-text').innerText = `${day}.${month}.${year}`;
 }
 
 function updateDashboard() {
@@ -275,7 +275,7 @@ async function takeScreenshot() {
         // 3. Chuyển canvas thành ảnh JPEG (nén tốt hơn PNG cho các vùng mờ/gradient)
         const image = canvas.toDataURL("image/jpeg", 0.85);
         const link = document.createElement('a');
-        const dateStr = document.getElementById('display-date').innerText.replace(/\./g, '-');
+        const dateStr = document.getElementById('date-text').innerText.replace(/\./g, '-');
 
         link.download = `HGPT-CHUYEN-CAN-${dateStr}.jpg`;
         link.href = image;
