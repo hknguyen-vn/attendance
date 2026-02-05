@@ -216,7 +216,7 @@ body {
 .summary-zone {
     display: flex;
     gap: 40px;
-    background: #fff;
+    background: #ebe9e8;
     padding: 30px;
     border-radius: var(--radius);
     position: relative;
