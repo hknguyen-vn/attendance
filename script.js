@@ -172,6 +172,12 @@ function getCategoryInfo(text) {
             label: "HGPT CELEBRATIONS",
             icon: "gift",
             color: "var(--hgpt-red)"
+        },
+        {
+            keys: ['trải nghiệm khách hàng', 'khách hàng', 'phục vụ', 'thấu hiểu', 'xin lỗi', 'tiếp cận', 'phàn nàn', 'nguyên tắc'],
+            label: "TRẢI NGHIỆM KHÁCH HÀNG",
+            icon: "heart",
+            color: "var(--hgpt-red)"
         }
     ];
 
