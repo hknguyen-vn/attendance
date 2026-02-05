@@ -8,7 +8,7 @@ Bộ thông điệp dành riêng cho Cán bộ Công nhân viên HGPT Steel, t�
 - AN TOÀN LÀ TRÊN HẾT | Cẩn trọng từng giây, bảo vệ chính mình, giữ gìn hạnh phúc gia đình.
 - HGPT SAFETY | Bảo hộ đầy đủ, quy trình tuân thủ, an tâm sản xuất.
 - KỶ LUẬT LÀ SỨC MẠNH | Đúng giờ, đúng việc, đúng quy trình là tác phong người HGPT.
-- AN TOÀN ĐỂ VỀ NHÀ | Một ngày làm việc an toàn là một ngày trọn vẹn niềm vui.
+- AN TOÀN ĐỂ VỀ NHÀ | Một ngày làm việc an toàn là một ngày trọn vẹn niềm vui..
 
 ### ✨ GIÁ TRỊ CỐT LÕI
 - NÓI SAO LÀM VẬY | Cam kết đúng tiến độ, đúng chủng loại, đúng yêu cầu.
