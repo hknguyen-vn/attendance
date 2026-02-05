@@ -228,9 +228,18 @@ body {
 .stat-row {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     padding: 12px 0;
     border-bottom: 1px solid #f1f1f1;
     font-size: 15px;
+}
+
+.stat-row span {
+    text-transform: uppercase;
+}
+
+.stat-row.highlight span {
+    text-transform: none;
 }
 
 .stat-row:last-child {
