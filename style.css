@@ -16,8 +16,27 @@
 
 body {
     font-family: 'Montserrat', sans-serif;
-    background-color: #e9ecef;
     min-height: 100vh;
+    background-image: url('bg-factory.png');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    position: relative;
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 45, 114, 0.4);
+    /* Thêm lớp phủ xanh để đồng bộ thương hiệu */
+    backdrop-filter: blur(8px);
+    /* Làm mờ ảnh nền */
+    -webkit-backdrop-filter: blur(8px);
+    z-index: -1;
 }
 
 .app-wrapper {
@@ -31,11 +50,39 @@ body {
 /* --- DASHBOARD CANVAS (LEFT) --- */
 .dashboard-canvas {
     flex: 1;
-    background: var(--white);
+    background: rgba(255, 255, 255, 0.96);
+    /* Tăng độ đục nhẹ để chữ rõ hơn */
+    backdrop-filter: blur(10px);
     border-radius: 20px;
     padding: 40px;
-    box-shadow: var(--card-shadow);
+    box-shadow: 0 15px 50px rgba(0, 0, 0, 0.15);
     min-width: 850px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    position: relative;
+    overflow: hidden;
+}
+
+.dashboard-canvas::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('bg-structure.png');
+    background-size: cover;
+    background-position: center;
+    opacity: 0.08;
+    /* Độ mờ cực thấp để làm watermark */
+    filter: grayscale(100%);
+    /* Chuyển về đen trắng cho tinh tế */
+    z-index: 0;
+    pointer-events: none;
+}
+
+.dashboard-canvas>* {
+    position: relative;
+    z-index: 1;
 }
 
 .db-header {
@@ -184,12 +231,12 @@ body {
     display: flex;
     align-items: center;
     gap: 15px;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 }
 
 .icon-circle {
-    width: 70px;
-    height: 70px;
+    width: 60px;
+    height: 60px;
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -220,9 +267,9 @@ body {
 }
 
 .card-head h3 {
-    font-size: 16px;
+    font-size: 20px;
     font-weight: 800;
-    color: #444;
+    color: var(--hgpt-brown);
 }
 
 .stat-row {
@@ -232,6 +279,7 @@ body {
     padding: 12px 0;
     border-bottom: 1px solid #f1f1f1;
     font-size: 15px;
+    font-weight: 600;
 }
 
 .stat-row span {
@@ -522,15 +570,15 @@ footer {
 /* --- CONTROL PANEL (RIGHT) --- */
 .control-panel {
     width: 380px;
-    background: linear-gradient(135deg, var(--hgpt-brown) 0%, #3a2817 100%);
+    background: linear-gradient(135deg, rgba(80, 55, 32, 0.95) 0%, rgba(58, 40, 23, 0.98) 100%);
+    backdrop-filter: blur(15px);
     color: white;
     border-radius: 24px;
     padding: 24px;
-    /* Giảm từ 30px */
     display: flex;
     flex-direction: column;
-    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.2);
-    border: 1px solid rgba(255, 255, 255, 0.05);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .panel-header {
