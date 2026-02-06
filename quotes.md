@@ -23,13 +23,13 @@ Bộ thông điệp dành riêng cho Cán bộ Công nhân viên HGPT Steel, t�
 - TRÁCH NHIỆM ĐẾN CÙNG | Hỗ trợ Khách hàng vượt ngoài phạm vi công việc khi gặp khó khăn.
 
 ### 📊 TRẢI NGHIỆM KHÁCH HÀNG
-- Nguyên tắc 01. LÀM CHO KHÁCH HÀNG DỄ DÀNG | Luôn hướng tới sự thuận tiện, giảm thiểu thời gian và công sức cho khách hàng.
-- Nguyên tắc 02. THẤU HIỂU KHÁCH HÀNG | Ưu tiên thấu hiểu từng khách hàng cụ thể thay vì bị ám ảnh bởi đối thủ.
-- Nguyên tắc 03. TÔN TRỌNG KHÁCH HÀNG | Giữ thái độ đúng mực và tôn trọng khách hàng trong mọi tình huống.
-- Nguyên tắc 04. ĐỪNG BÁN - HÃY PHỤC VỤ | Coi bán hàng là hành trình xây dựng mối quan hệ bền vững thay vì chỉ là giao dịch.
-- Nguyên tắc 05. GẮN KẾT TẤT CẢ MỌI NGƯỜI | Trải nghiệm khách hàng là trách nhiệm của toàn bộ tổ chức, không riêng ai.
-- Nguyên tắc 06. THỐNG NHẤT MỤC TIÊU | Hãy giúp khách hàng đạt được mục tiêu của họ, lòng trung thành sẽ tự đến.
-- Nguyên tắc 07. DỄ DÀNG TIẾP CẬN | Sự thuận tiện trong việc liên hệ và tiếp cận là yếu tố then chốt để xây dựng niềm tin.
-- Nguyên tắc 08. CÓ TRÁCH NHIỆM (ACCOUNTABLE) | Chủ động làm chủ và giải quyết vấn đề của khách hàng dù đó là lỗi của ai.
-- Nguyên tắc 09. SẴN SÀNG XIN LỖI | Chân thành xin lỗi để xoa dịu cảm xúc thay vì tranh luận thắng thua với khách hàng.
-- Nguyên tắc 10. LỜI PHÀN NÀN LÀ MÓN QUÀ | Chuẩn bị kỹ và đón nhận các phản hồi tiêu cực để không ngừng cải thiện.
+- Nguyên tắc 01 - TNKH. LÀM CHO KHÁCH HÀNG DỄ DÀNG | Luôn hướng tới sự thuận tiện, giảm thiểu thời gian và công sức cho khách hàng.
+- Nguyên tắc 02 - TNKH. THẤU HIỂU KHÁCH HÀNG | Ưu tiên thấu hiểu từng khách hàng cụ thể thay vì bị ám ảnh bởi đối thủ.
+- Nguyên tắc 03 - TNKH. TÔN TRỌNG KHÁCH HÀNG | Giữ thái độ đúng mực và tôn trọng khách hàng trong mọi tình huống.
+- Nguyên tắc 04 - TNKH. ĐỪNG BÁN - HÃY PHỤC VỤ | Coi bán hàng là hành trình xây dựng mối quan hệ bền vững thay vì chỉ là giao dịch.
+- Nguyên tắc 05 - TNKH. GẮN KẾT TẤT CẢ MỌI NGƯỜI | Trải nghiệm khách hàng là trách nhiệm của toàn bộ tổ chức, không riêng ai.
+- Nguyên tắc 06 - TNKH. THỐNG NHẤT MỤC TIÊU | Khi khách hàng đạt được mục tiêu, họ sẽ trung thành và mang lại doanh thu như một hệ quả tất yếu.
+- Nguyên tắc 07 - TNKH. DỄ DÀNG TIẾP CẬN | Sự thuận tiện trong việc liên hệ và tiếp cận là yếu tố then chốt để xây dựng niềm tin.
+- Nguyên tắc 08 - TNKH. CÓ TRÁCH NHIỆM (ACCOUNTABLE) | Chủ động làm chủ và giải quyết vấn đề của khách hàng dù đó là lỗi của ai.
+- Nguyên tắc 09 - TNKH. SẴN SÀNG XIN LỖI | Chân thành xin lỗi để xoa dịu cảm xúc thay vì tranh luận thắng thua với khách hàng.
+- Nguyên tắc 10 - TNKH. LỜI PHÀN NÀN LÀ MÓN QUÀ | Chuẩn bị kỹ và đón nhận các phản hồi tiêu cực để không ngừng cải thiện.
