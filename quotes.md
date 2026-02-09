@@ -33,3 +33,9 @@ Bộ thông điệp dành riêng cho Cán bộ Công nhân viên HGPT Steel, t�
 - Nguyên tắc 08 - TNKH. CÓ TRÁCH NHIỆM (ACCOUNTABLE) | Chủ động làm chủ và giải quyết vấn đề của Khách hàng dù đó là lỗi của ai.
 - Nguyên tắc 09 - TNKH. SẴN SÀNG XIN LỖI | Chân thành xin lỗi để xoa dịu cảm xúc thay vì tranh luận thắng thua với Khách hàng.
 - Nguyên tắc 10 - TNKH. LỜI PHÀN NÀN LÀ MÓN QUÀ | Chuẩn bị kỹ và đón nhận các phản hồi tiêu cực để không ngừng cải thiện.
+
+### 🎊 TẾT NGUYÊN ĐÁN 2026 - NĂM BÍNH NGỌ
+- NĂM MỚI - QUYẾT TÂM MỚI | Bính Ngọ - Năm Ngựa phi nước đại, HGPT vươn xa, mỗi người một bước tiến mới.
+- GIỮ GÌN SỨC KHỎE TẾT | Nghỉ ngơi hợp lý, ăn uống điều độ, khỏe mạnh để sẵn sàng chinh phục năm mới.
+- TRUYỀN LỬA ĐAM MÊ | Xuân sang tràn đầy năng lượng, mang tinh thần cầu tiến vào mỗi ngày làm việc mới.
+- AN KHANG - THỊNH VƯỢNG | Chúc toàn thể gia đình HGPT Steel năm Bính Ngọ sức khỏe dồi dào, tài lộc kéo đến, hạnh phúc viên mãn.
