@@ -28,7 +28,6 @@ Bộ thông điệp dành riêng cho Cán bộ Công nhân viên HGPT Steel, t�
 - Nguyên tắc 03 - TNKH. TÔN TRỌNG KHÁCH HÀNG | Giữ thái độ đúng mực và tôn trọng Khách hàng trong mọi tình huống.
 - Nguyên tắc 04 - TNKH. ĐỪNG BÁN - HÃY PHỤC VỤ | Coi bán hàng là hành trình xây dựng mối quan hệ bền vững thay vì chỉ là giao dịch.
 - Nguyên tắc 05 - TNKH. GẮN KẾT TẤT CẢ MỌI NGƯỜI | Trải nghiệm Khách hàng là trách nhiệm của toàn bộ tổ chức, không riêng ai.
-- Nguyên tắc 06 - TNKH. THỐNG NHẤT MỤC TIÊU | Khi Khách hàng đạt được mục tiêu, họ sẽ trung thành và mang lại doanh thu như một hệ quả tất yếu.
 - Nguyên tắc 07 - TNKH. DỄ DÀNG TIẾP CẬN | Sự thuận tiện trong việc liên hệ và tiếp cận là yếu tố then chốt để xây dựng niềm tin.
 - Nguyên tắc 08 - TNKH. CÓ TRÁCH NHIỆM (ACCOUNTABLE) | Chủ động làm chủ và giải quyết vấn đề của Khách hàng dù đó là lỗi của ai.
 - Nguyên tắc 09 - TNKH. SẴN SÀNG XIN LỖI | Chân thành xin lỗi để xoa dịu cảm xúc thay vì tranh luận thắng thua với Khách hàng.
