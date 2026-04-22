@@ -20,7 +20,7 @@ async function loadQuotes() {
     } catch (error) {
         console.error("Lỗi khi tải file quotes.md:", error);
         // Dự phòng nếu lỗi load file
-        quotes = [{ main: "HGPT STEEL", sub: "Success Together." }];
+        quotes = [{ main: "HGPT STEEL", sub: "Cùng nhau thành công." }];
         shuffleQuote();
     }
 }

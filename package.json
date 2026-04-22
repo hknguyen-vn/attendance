@@ -1,0 +1,13 @@
+{
+  "name": "attendance-app",
+  "version": "1.0.0",
+  "description": "HGPT Steel Attendance Management App",
+  "main": "script.js",
+  "scripts": {
+    "dev": "npx live-server",
+    "start": "npx live-server"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
